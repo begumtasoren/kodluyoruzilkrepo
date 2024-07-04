@@ -1,0 +1,40 @@
+class TreeNode: 
+  def __init__(self, key):
+      self.left = None
+      self.right = None
+      self.value = key
+
+class BinarySearchTree:
+  def __init__(self):
+    self.root= None
+  def insert(self, key):
+    if self.root is None:
+      self.root = TreeNode(key)
+    else:
+      self._inserte(self.root, key)
+def _insert(self,node,key):
+  if key < node.value:
+    if node.left is None:
+      node.left= TreeNode(key)
+        else:
+          self._insert(node.left, key)
+  else:
+    if node.right is None:
+        node.right=TreeNode(key)
+    else:
+      self._insert(node.right,key)
+def inorder_traversal(self,node):
+    if node is not None:
+self.inorder_traversal(node.left)
+      print(node.value, end='')
+self.inorder_traversal(node.left)
+      print(node.value, end='')
+self.inorder_travesal(node.right)
+
+arr=[7,5,1,8,3,6,0,9,4,2]
+bst = BinarySearchTree()
+for num in arr:
+    bst.insert(num)
+print("Inorder traversal of BST:")
+bst.inorder_traversal(bst.root)
+      
